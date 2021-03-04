@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="game.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <main class="main" id="main" hidden>
+            <div class="header block">
+                <div class="column1">
+                    <img src="logo.svg">
+                </div>
+                <div class="column2">
+                    <div class="score"><span>SCORE</span></div>
+                    <div><span id="account">0</span> </div>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="pentagon "><img src="bg-pentagon.svg"></div>
+                <div class="scissors icon " data-value="scissors"><img src="icon-scissors.svg"></div>
+                <div class="lizard icon " data-value="lizard"><img src="icon-lizard.svg"></div>
+                <div class="paper icon " data-value="paper"><img src="icon-paper.svg"></div>
+                <div class="rock icon " data-value="rock"><img src="icon-rock.svg"></div>
+                <div class="spock icon " data-value="spock"><img src="icon-spock.svg"></div>
+            </div>
+            <div class="contener" id="contener">
+                <div id="winerPlaer" >
+                    <div class="winer">
+                        <span>YOU PICKED</span>
+                    </div>
+                    
+                        <div id="first"> </div>
+                </div>
+                <div id="winerComp" >
+                    <div class="winer">
+                        <span hidden id="spancomp">THE HOUSE PICKED</span>
+                    </div>
+                    
+                    <div id="second"> </div>
+                </div>      
+            </div>
+            <div><button class="button buttonRulse">Rules</button></div>
+            <div id="imgRule" hidden>
+                <div class="pageRule">
+                        <div>
+                            <div class="colum1">
+                                <span>RULES</span>
+                            </div>
+                            <div class="colum2">
+                                <button id="close"><img src="icon-close.svg"></button>
+                            </div>
+                        </div >
+                        <div class="imgRules">
+                            <img  src="image-rules-bonus.svg">
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="content" id="start">
+        <div class="button start"><img src="logo.svg"></div>
+
+        <button class="start">START</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

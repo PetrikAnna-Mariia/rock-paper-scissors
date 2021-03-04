@@ -1,0 +1,278 @@
+body {
+  background-color: hsl(214, 47%, 23%);
+  margin: 0;
+}
+@font-face {
+  font-family: Barlow Semi Condensed;
+  src: url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+}
+button {
+  background-color: hsl(214, 47%, 23%);
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: hsl(235, 68%, 96%);
+  color: hsl(235, 68%, 96%);
+  font-size: large;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8em 1em calc(0.8em + 3px);
+  box-shadow: 0 -3px hsl(214, 47%, 23%) inset;
+  transition: 0.2s;
+  text-transform: uppercase;
+}
+button.start {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+}
+button:hover {
+  background: hsl(214, 48%, 17%);
+}
+#start {
+  position: absolute;
+}
+#wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.start {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.header {
+  border: 2px solid hsla(236, 70%, 96%, 0.562);
+  font-size: large;
+  height: 105px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 100px;
+}
+.column1 {
+  float: left;
+}
+.header .column2 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.column2 {
+  background-color: hsl(235, 68%, 96%);
+  border-radius: 8px;
+  float: right;
+  width: 120px;
+  height: 105px;
+}
+.score {
+  font: 15px Barlow Semi Condensed;
+  color: hsl(214, 47%, 23%);
+  width: 100%;
+}
+.account {
+  font: 30px Barlow Semi Condensed;
+  color: hsl(214, 48%, 17%);
+  width: 100%;
+}
+.icons {
+  padding: 0 80px;
+}
+.pentagon {
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon {
+  transition-property: all;
+  transition-duration: 2s;
+  width: 100px;
+  height: 100px;
+  border: 15px solid;
+  border-radius: 100%;
+  background-color: hsl(236, 36%, 91%);
+  position: relative;
+}
+.scissors {
+  border-color: hsl(152, 88%, 38%);
+  top: -250px;
+  left: 100px;
+}
+.lizard {
+  border-color: hsl(34, 97%, 55%);
+  top: -210px;
+  left: 150px;
+}
+.paper {
+  border-color: hsl(59, 100%, 58%);
+  top: -340px;
+  left: 350px;
+}
+.rock {
+  border-color: hsl(199, 95%, 58%);
+  top: -640px;
+  left: 410px;
+}
+.spock {
+  border-color: hsl(0, 88%, 47%);
+  top: -870px;
+  left: 255px;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#selectedIcon {
+  transition-property: all;
+  transition-duration: 2s;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+}
+#selectedIcon img {
+  width: 60%;
+}
+#selectedComp img {
+  width: 60%;
+}
+#anknownImg {
+  border: 15px solid hsl(214, 48%, 17%);
+  border-radius: 100%;
+  background-color: hsl(214, 48%, 17%);
+  float: right;
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  font-size: large;
+  font-weight: 700;
+  color: hsl(210, 50%, 4%);
+}
+#selectedComp {
+  margin-right: auto;
+  margin-left: auto;
+  width: 150px;
+  height: 150px;
+  position: static;
+}
+#contenerMessage {
+  margin: 0;
+  position: static;
+}
+#message {
+  width: 200px;
+  height: 100px;
+  font: 40px Barlow Semi Condensed;
+  color: hsl(235, 68%, 96%);
+  margin-bottom: 20px;
+}
+#again button {
+  width: 200px;
+  padding: 10px 15px;
+  font: 20px Barlow Semi Condensed;
+  background-color: hsl(235, 68%, 96%);
+  border: 1px solid hsl(235, 68%, 96%);
+  color: hsl(214, 48%, 17%);
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+}
+#imgRule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: hsla(214, 48%, 17%, 0.5);
+}
+
+.contener {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contenerMessage #message {
+  height: auto;
+}
+
+.buttonRulse {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 150px;
+}
+
+.pageRule {
+  border: 1px solid hsl(235, 68%, 96%);
+  border-radius: 10px;
+  background-color: hsl(235, 68%, 96%);
+  position: absolute;
+  height: 500px;
+  width: 400px;
+}
+/* .effect {
+  height: 250px;
+  width: 250px;
+
+  /* animation: shadow 3s 1 linear; */
+/* } */
+*/
+/* @keyframes shadow {
+  from {
+    background-image: radial-gradient(
+      circle at 200px 200px,
+      hsl(235, 68%, 96%),
+      hsl(214, 47%, 23%)
+    );
+  }
+  to {
+    background-image: radial-gradient(
+      circle at 200px 200px,
+      hsl(235, 68%, 96%),
+      hsl(214, 47%, 23%)
+    );
+  }
+} */
+#imgRules {
+  margin-left: auto;
+  margin-right: auto;
+}
+#close {
+  background-color: hsl(235, 68%, 96%);
+  border: 0px;
+  outline: 0;
+  box-shadow: none;
+}
+#close:hover {
+  background-color: hsl(236, 24%, 86%);
+}
+.colum1 {
+  font: 15px Barlow Semi Condensed;
+  color: hsl(210, 50%, 4%);
+  float: left;
+  margin: 15px;
+}
+.colum2 {
+  float: right;
+}
+.winer {
+  margin: 20px;
+}
+.winer span {
+  font: 30px Barlow Semi Condensed;
+  color: hsl(235, 68%, 96%);
+}
